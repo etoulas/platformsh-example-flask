@@ -1,0 +1,29 @@
+# https://docs.platform.sh/user_guide/reference/toolstacks/python/index.html
+
+name: flaskplatform
+type: python:3.5
+
+web:
+  commands:
+    start: "gunicorn -b $PORT flaskplatform:app"
+  locations:
+    "/":
+      root: ""
+      passthru: true
+      allow: false
+    "/static":
+      root: "static/"
+      allow: true
+
+hooks:
+  build: |
+    pip install -r requirements.txt
+    pip install -e .
+    pip install gunicorn
+
+mounts:
+  "/tmp": "shared:files/tmp"
+  "/logs": "shared:files/logs"
+
+disk: 512
+
