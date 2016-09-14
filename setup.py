@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-setup(name='Distutils',
+setup(name='Flask platform.sh',
       version='1.0',
       description='Flask platform.sh example',
       author='Tim Toulas',

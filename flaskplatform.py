@@ -11,4 +11,4 @@ def hello_world():
     return 'Hello, platform.sh!'
 
 
-app.wsgi_app = ProxyFix(app.wsgi_app)
+app.wsgi_app = ProxyFix(app.wsgi_app) # not sure if this is really required
