@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(name='Flask platform.sh',
       version='1.0',
@@ -6,6 +6,6 @@ setup(name='Flask platform.sh',
       author='Tim Toulas',
       author_email='tim.toulas@...',
       url='https://.../',
-      packages=['distutils', 'distutils.command'],
+      packages=find_packages(),
      )
 
